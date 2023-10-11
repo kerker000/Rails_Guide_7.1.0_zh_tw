@@ -45,80 +45,64 @@ Rails 的哲學包含兩個主要的指導原則：
 
 依照本指南，你將建立一個 Rails 專案，一個非常簡單的部落格，`blog`。
 
-NOTE: The examples below use `$` to represent your terminal prompt in a UNIX-like OS,
-though it may have been customized to appear differently. If you are using Windows,
-your prompt will look something like `C:\source_code>`.
+注意：下面的範例中，使用 `$` 來代表在類UNIX作業系统中的的終端機提示符號，它可能被設定為不同方式顯示。如果你使用的是Windows作業系統，提示符號將類似 `C:\source_code>`。
 
-### Installing Rails
+### 安裝 Rails
 
-Before you install Rails, you should check to make sure that your system has the
-proper prerequisites installed. These include:
+在安裝 Rails 之前，應該先檢查系統中是否已經安裝了這些必要條件元件。包括：
 
 * Ruby
 * SQLite3
 
-#### Installing Ruby
+#### 安裝 Ruby
 
-Open up a command line prompt. On macOS open Terminal.app; on Windows choose
-"Run" from your Start menu and type `cmd.exe`. Any commands prefaced with a
-dollar sign `$` should be run in the command line. Verify that you have a
-current version of Ruby installed:
+打開命令列介面。在 macOS 上打開「終端機」;而在 Windows 上則是選擇"運行"，然後輸入`cmd.exe`。任何以
+美元符號 `$` 開頭的命令都應在命令行中運行。確認你已經安裝當前版本的 Ruby。
 
 ```bash
 $ ruby --version
 ruby 2.7.0
 ```
 
-Rails requires Ruby version 2.7.0 or later. It is preferred to use the latest Ruby version.
-If the version number returned is less than that number (such as 2.3.7, or 1.8.7),
-you'll need to install a fresh copy of Ruby.
+Rails 需要 Ruby 2.7.0 或更高版本。最好使用最新的 Ruby 版本。如果回傳的版本小於2.7.0（如 2.3.7 或 1.8.7），則需要重新安裝 Ruby。
 
-To install Rails on Windows, you'll first need to install [Ruby Installer](https://rubyinstaller.org/).
+要在 Windows 上安裝 Rails，首先需要安裝 [Ruby Installer](https://rubyinstaller.org/)。
 
-For more installation methods for most Operating Systems take a look at
-[ruby-lang.org](https://www.ruby-lang.org/en/documentation/installation/).
+在更多作業系統中的安裝指示，請參閱[ruby-lang.org](https://www.ruby-lang.org/en/documentation/installation/).
 
-#### Installing SQLite3
+#### 安裝 SQLite3
 
-You will also need an installation of the SQLite3 database.
-Many popular UNIX-like OSes ship with an acceptable version of SQLite3.
-Others can find installation instructions at the [SQLite3 website](https://www.sqlite.org).
+你還需要安裝SQLite3資料庫，許多常見的類UNIX作業系統都已經內建可接受版本的SQLite3。其他版本可在 [SQLite3 網站](https://www.sqlite.org)上找到安裝說明。
 
-Verify that it is correctly installed and in your load `PATH`:
+確認SQLite3有被正確安裝，並位於可載入的路徑`(PATH)`中
 
 ```bash
 $ sqlite3 --version
 ```
 
-The program should report its version.
+該程式會回報它的版本
 
-#### Installing Rails
+#### 安裝 Rails
 
-To install Rails, use the `gem install` command provided by RubyGems:
+要安裝Rails，請用 RubyGems 提供的 `gem install` 指令：
 
 ```bash
 $ gem install rails
 ```
 
-To verify that you have everything installed correctly, you should be able to
-run the following in a new terminal:
+想驗證是否順利安裝完成，你可以在新的終端機執行以下內容。
 
 ```bash
 $ rails --version
 ```
 
-If it says something like "Rails 7.0.0", you are ready to continue.
+如果顯示類似"Rails 7.0.0"的內容，就可以繼續下一步了。
 
-### Creating the Blog Application
+### 創建部落格應用程式
 
-Rails comes with a number of scripts called generators that are designed to make
-your development life easier by creating everything that's necessary to start
-working on a particular task. One of these is the new application generator,
-which will provide you with the foundation of a fresh Rails application so that
-you don't have to write it yourself.
+Rails 提供許多稱為產生器(generator)的腳本，他們可以產生完成特定任務所需的一切，讓你的開發過程更輕鬆。新的應用程式產生器就是其中一個，它將提供你一個全新的 Rails 應用程式的基礎，讓你不用自己編寫。
 
-To use this generator, open a terminal, navigate to a directory where you have
-rights to create files, and run:
+要使用這個產生器，請打開終端機，進到有權限建立檔案的目錄，然後執行：
 
 ```bash
 $ rails new blog
