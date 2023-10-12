@@ -108,35 +108,29 @@ Rails 提供許多稱為產生器(generator)的腳本，他們可以產生完成
 $ rails new blog
 ```
 
-This will create a Rails application called Blog in a `blog` directory and
-install the gem dependencies that are already mentioned in `Gemfile` using
-`bundle install`.
+這將會在 `blog` 目錄中產生一個名為 Blog 的 Rails 應用程式，再來使用 `bundle install` 安裝在 `Gemfile` 中提及的相依項目。
 
-TIP: You can see all of the command line options that the Rails application
-generator accepts by running `rails new --help`.
+TIP: 執行`rails new --help`命令可以查看 Rails 應用程式產生器接受的所有指令選項。
 
-After you create the blog application, switch to its folder:
+產生 Blog 應用程式後，切換到它所在的資料夾：
 
 ```bash
 $ cd blog
 ```
 
-The `blog` directory will have a number of generated files and folders that make
-up the structure of a Rails application. Most of the work in this tutorial will
-happen in the `app` folder, but here's a basic rundown on the function of each
-of the files and folders that Rails creates by default:
+`blog` 的目錄中會有許多產生出來的檔案和資料夾，它們構成了 Rails 應用程式的結構。本指南中的大部分工作都將在 `app` 資料夾中完成，但下面會先逐一介紹 Rails 預設產生的每個檔案和資料夾的基本功能。
 
-| File/Folder | Purpose |
+| 檔案/資料夾 | 功能 |
 | ----------- | ------- |
-|app/|Contains the controllers, models, views, helpers, mailers, channels, jobs, and assets for your application. You'll focus on this folder for the remainder of this guide.|
-|bin/|Contains the `rails` script that starts your app and can contain other scripts you use to set up, update, deploy, or run your application.|
-|config/|Contains configuration for your application's routes, database, and more. This is covered in more detail in [Configuring Rails Applications](configuring.html).|
-|config.ru|Rack configuration for Rack-based servers used to start the application. For more information about Rack, see the [Rack website](https://rack.github.io/).|
-|db/|Contains your current database schema, as well as the database migrations.|
-|Gemfile<br>Gemfile.lock|These files allow you to specify what gem dependencies are needed for your Rails application. These files are used by the Bundler gem. For more information about Bundler, see the [Bundler website](https://bundler.io).|
-|lib/|Extended modules for your application.|
-|log/|Application log files.|
-|public/|Contains static files and compiled assets. When your app is running, this directory will be exposed as-is.|
+|app/|包含應用程式的控制器(controller)、模型(model)、視圖(view)、助手方法(helper)、郵件發送器(mailer)、通道(channel)、任務(job)、和 資源(asset)。在本指南的其餘部分，我們將會將焦點放在這個資料夾。|
+|bin/|包含啟動應用程式的 `rails` 腳本，也可以存放用於設定、更新、部署或運行應用程式的其他腳本。|
+|config/|包含應用程式路徑(routes)、資料庫等設置。有關詳細資訊，請參考[設置 Rails 應用程式](configuring.html)。|
+|config.ru|用來啟動應用程式的，以 Rack 為基礎的伺服器設置。有關 Rack 的更多資訊，請參考[Rack 網站](https://rack.github.io/)。|
+|db/|包含資料庫模式(schema)，以及資料庫遷移(migration)檔案。|
+|Gemfile<br>Gemfile.lock|透過這些檔案，你可以指定 Rails 應用程式需要那些gem相依項目。Bundler 這個 gem 會取用這些檔案。有關 Bundler 的更多資訊，請參考[Bundler 網站](https://bundler.io)。|
+|lib/|為你的應用程式提供擴充模組(module)。|
+|log/|應用程式日誌(log)檔案。|
+|public/|包含靜態檔案跟已編譯的資源。程式運行時，此目錄將如它本來的樣子呈現|
 |Rakefile|This file locates and loads tasks that can be run from the command line. The task definitions are defined throughout the components of Rails. Rather than changing `Rakefile`, you should add your own tasks by adding files to the `lib/tasks` directory of your application.|
 |README.md|This is a brief instruction manual for your application. You should edit this file to tell others what your application does, how to set it up, and so on.|
 |storage/|Active Storage files for Disk Service. This is covered in [Active Storage Overview](active_storage_overview.html).|
