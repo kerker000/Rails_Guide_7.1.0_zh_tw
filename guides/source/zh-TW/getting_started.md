@@ -130,28 +130,30 @@ $ cd blog
 |Gemfile<br>Gemfile.lock|透過這些檔案，你可以指定 Rails 應用程式需要那些gem相依項目。Bundler 這個 gem 會取用這些檔案。有關 Bundler 的更多資訊，請參考[Bundler 網站](https://bundler.io)。|
 |lib/|為你的應用程式提供擴充模組(module)。|
 |log/|應用程式日誌(log)檔案。|
-|public/|包含靜態檔案跟已編譯的資源。程式運行時，此目錄將如它本來的樣子呈現|
-|Rakefile|This file locates and loads tasks that can be run from the command line. The task definitions are defined throughout the components of Rails. Rather than changing `Rakefile`, you should add your own tasks by adding files to the `lib/tasks` directory of your application.|
-|README.md|This is a brief instruction manual for your application. You should edit this file to tell others what your application does, how to set it up, and so on.|
-|storage/|Active Storage files for Disk Service. This is covered in [Active Storage Overview](active_storage_overview.html).|
-|test/|Unit tests, fixtures, and other test apparatus. These are covered in [Testing Rails Applications](testing.html).|
-|tmp/|Temporary files (like cache and pid files).|
-|vendor/|A place for all third-party code. In a typical Rails application this includes vendored gems.|
-|.gitattributes|This file defines metadata for specific paths in a git repository. This metadata can be used by git and other tools to enhance their behavior. See the [gitattributes documentation](https://git-scm.com/docs/gitattributes) for more information.|
-|.gitignore|This file tells git which files (or patterns) it should ignore. See [GitHub - Ignoring files](https://help.github.com/articles/ignoring-files) for more information about ignoring files.|
-|.ruby-version|This file contains the default Ruby version.|
+|public/|包含靜態檔案跟已編譯的資源。程式運行時，此目錄將依它本來的樣子呈現|
+|Rakefile|這個檔案定位並載入可以透過指令運行的任務。任務的定義可以分散在 Rails 框架的不同元件中。如果你需要添加自訂的任務，你應該將文件添加到應用程式的 `lib/tasks` 資料夾，而不是修改 `Rakefile`。|
+|README.md|這是應用程式的簡易說明書。你應該編輯這個檔案，告知他人這個應用程式的功能、設定方法等。|
+|storage/|磁碟服務(Disk Service) 的 Active Storage 檔案，[Active Storage 概要](active_storage_overview.html)中有進一步介紹。|
+|test/|單元測試、固定測試和其他測試工具。[測試 Rails 應用程式](testing.html)中介紹了這些內容。|
+|tmp/|暫存檔案(如快取和 pid 檔案).|
+|vendor/|存放第三方程式碼的地方。在典型的 Rails  應用程式中，包含了外部提供的 gem|
+|.gitattributes|這個檔案為 git 儲存庫中特定路徑定義了後設資料(Metadata)。git 和其他工具可以使用這些後設資料增強它們的行為。 請參考[gitattributes 文件](https://git-scm.com/docs/gitattributes)以獲取更多詳細資訊。|
+|.gitignore|這個檔案告訴 git 應該忽略那些檔案（或模式）。有關忽略檔案的更多資訊，請參考[GitHub - 忽略檔案](https://help.github.com/articles/ignoring-files)|
+|.ruby-version|這個檔案包含預設的 Ruby 版本|
 
-Hello, Rails!
+哈囉，Rails!
 -------------
 
 To begin with, let's get some text up on screen quickly. To do this, you need to
 get your Rails application server running.
+首先，讓我們快速的讓一些文字顯示在螢幕上。為此，你需要執行你的 Rails 應用程式伺服器。
 
-### Starting Up the Web Server
+### 啟動 Web 伺服器
 
 You actually have a functional Rails application already. To see it, you need to
 start a web server on your development machine. You can do this by running the
 following command in the `blog` directory:
+你已經有了一個可以正常執行的Rails應用程式。要看到它的話，你需要在開發的設備上啟動 Web 伺服器。在 `blog` 的路徑下，執行以下指令
 
 ```bash
 $ bin/rails server
